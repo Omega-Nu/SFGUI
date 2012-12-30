@@ -49,6 +49,8 @@ void BREW::ResetProperties() {
 	SetProperty( "Button:PRELIGHT", "Color", sf::Color::White );
 	SetProperty( "Button:ACTIVE", "BackgroundColor", sf::Color( 0x55, 0x55, 0x55 ) );
 	SetProperty( "Button:ACTIVE", "Color", sf::Color::Black );
+	SetProperty( "Button:INSENSITIVE", "BackgroundColor", sf::Color( 0x65, 0x67, 0x62 ) );
+	SetProperty( "Button:INSENSITIVE", "Color", sf::Color( 0x99, 0x99, 0x99) );
 
 	// ToggleButton-specific.
 	SetProperty( "ToggleButton", "BackgroundColor", sf::Color( 0x55, 0x57, 0x52 ) );

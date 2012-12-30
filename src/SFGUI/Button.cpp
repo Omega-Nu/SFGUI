@@ -49,6 +49,18 @@ void Button::ClearImage() {
 	}
 }
 
+void Button::EnableButton() {
+	if( GetState() == INSENSITIVE ) {
+		SetState( NORMAL );
+	}
+}
+
+void Button::DisableButton() {
+	if( GetState() != INSENSITIVE ) {
+		SetState( INSENSITIVE );
+	}
+}
+
 void Button::HandleMouseEnter( int /*x*/, int /*y*/ ) {
 	if( GetState() == NORMAL ) {
 		SetState( PRELIGHT );

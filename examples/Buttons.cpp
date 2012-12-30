@@ -27,6 +27,9 @@ class ButtonsExample {
 		// Create our Button smart pointer.
 		sfg::Button::Ptr m_button;
 
+		// Create our Disabled Button smart pointer.
+		sfg::Button::Ptr m_disabled_button;
+
 		// Create our ToggleButton smart pointer.
 		sfg::ToggleButton::Ptr m_toggle_button;
 
@@ -91,6 +94,13 @@ void ButtonsExample::Run() {
 
 	// Create a Box to contain all our fun buttons ;)
 	sfg::Box::Ptr box = sfg::Box::Create( sfg::Box::VERTICAL, 5.f );
+
+	// Create a disabled button
+	m_disabled_button = sfg::Button::Create( "This button is disabled" );
+	m_disabled_button->DisableButton();
+
+	// Add the disabled Button to the Box
+	box->Pack( m_disabled_button );
 
 	// Create the Button itself.
 	m_button = sfg::Button::Create( "Click me" );

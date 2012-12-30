@@ -49,6 +49,13 @@ class SFGUI_API Button : public Bin {
 		 */
 		void ClearImage();
 
+		/** Enables the button.
+		 */
+		void EnableButton();
+
+		/** Disabless the button.
+		 */
+		void DisableButton();
 	protected:
 		/** Ctor.
 		 */
