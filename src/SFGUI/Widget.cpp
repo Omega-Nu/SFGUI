@@ -251,6 +251,22 @@ void Widget::SetPosition( const sf::Vector2f& position ) {
 	}
 }
 
+void Widget::SetSensitive( bool state ) {
+	if( state ) {
+		SetState(NORMAL);
+	} else {
+		SetState(INSENSITIVE);
+	}
+}
+
+bool Widget::IsSensitive() {
+	if( GetState() != INSENSITIVE ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 void Widget::HandleEvent( const sf::Event& event ) {
 	if( !IsGloballyVisible() ) {
 		return;

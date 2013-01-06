@@ -152,6 +152,16 @@ class SFGUI_API Widget : public Object, public EnableSharedFromThis<Widget> {
 		 */
 		SharedPtr<const Container> GetParent() const;
 
+		/** Set the widget to an enabled or insensitive (disabled) state
+		* @param state bool
+		*/
+		void SetSensitive(bool state);
+
+		/** Returns true/false depending if the widget is enabled or insensitive (disabled)
+		* @return bool
+		*/
+		bool IsSensitive();
+
 		/** Set widget's state.
 		 * @param state State.
 		 */
